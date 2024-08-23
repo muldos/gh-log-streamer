@@ -1,0 +1,14 @@
+on:
+    repository_dispatch:
+      types: log-process
+name: process
+jobs:
+  deploy:
+    name: start the log pipeline
+    runs-on: ubuntu-latest
+    steps:
+    - name: process log file received
+      id: log-received
+      shell: bash
+      run: |
+        echo FILE RECEIVED ${{ github.event.client_payload.filename }}
