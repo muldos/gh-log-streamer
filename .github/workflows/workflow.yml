@@ -11,4 +11,4 @@ jobs:
       id: log-received
       shell: bash
       run: |
-        echo FILE RECEIVED ${{ github.event.client_payload.filename }}
+        echo FILE RECEIVED ${{ github.event.client_payload.name }}
