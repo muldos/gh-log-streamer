@@ -1,6 +1,6 @@
 on:
-    repository_dispatch:
-      types: log-process
+  repository_dispatch:
+    types: log-process
 name: process
 jobs:
   deploy:
